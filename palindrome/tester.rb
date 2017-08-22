@@ -5,6 +5,11 @@ class Tester
       return false if !string.is_a?(String)
       return false if string.length == 0
 
+      string = string.gsub(/[^\p{Alpha}]/, '').downcase
+
+      print "\n"
+      print string
+      print "\n"
 
       if string == string.reverse
         return true
@@ -21,6 +26,11 @@ class Tester
       return false if !string.is_a?(String)
       return false if string.length == 0
 
+      string = string.gsub(/[^\p{Alpha}]/, '').downcase
+
+      print "\n"
+      print string
+      print "\n"
 
       if string == string.reverse
         return true
