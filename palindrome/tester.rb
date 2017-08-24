@@ -32,6 +32,20 @@ class Tester
       # Creates a substring from the string consisting of only lowercase alpha characters
       string = string.gsub(/[^\p{Alpha}]/, '').downcase
 
+      left = 0
+      right = string.length - 1
+      while left < right do
+
+        if string[left] != string[right]
+          return false
+        end
+
+        left+=1
+        right-=1
+      end
+
+      return true
+
     end
   end
 end
