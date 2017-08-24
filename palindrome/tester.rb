@@ -35,6 +35,11 @@ class Tester
       # Assing variable for beginning and end of string
       left = 0
       right = string.length - 1
+
+      # The goal here is to perform the palindrome check without reversing the string.
+      # With "pointers" to the beginning and end of the string, we increment and decrement
+      # the "pointers". If the "pointers" meet at the center of the string, the string
+      # is a palindrome
       while left <= right do
         if string[left] != string[right]
           return false
